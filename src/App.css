@@ -1,3 +1,5 @@
+/* global */
+
 * {
   font-family: sans-serif;
 }
@@ -5,6 +7,8 @@
 body {
   min-height: 100vh;
 }
+
+/* modal and form inside */
 
 .modalForm {
   position: absolute;
@@ -47,6 +51,8 @@ body {
   padding: 0.5vw;
 }
 
+/* header */
+
 .header {
   height: 15vh;
   display: flex;
@@ -55,4 +61,25 @@ body {
   align-items: center;
   background-color: blue;
   width: 100vw;
+}
+
+/* navbar */
+
+.navbar {
+  position: absolute;
+  right: 0;
+  width: 20vw;
+  top: 15vh;
+  height: 85vh;
+  background-color: black;
+}
+
+.navbar--icon {
+  display: block;
+  position: absolute;
+  right: 0vw;
+  top: 15vw;
+  width: 3vw;
+  height: 3vw;
+  background-color: red;
 }

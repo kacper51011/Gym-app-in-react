@@ -1,15 +1,14 @@
 import React from "react";
 import * as faIcon from "react-icons/fa";
-import { Link } from "react-router-dom";
 
-function navbar() {
+function Navbar() {
   return (
     <div className="navbar">
       <div className="navbar--icon">
-        <Link to="#" className="menu-bar"></Link>
+        <faIcon.FaBars />
       </div>
     </div>
   );
 }
 
-export default navbar;
+export default Navbar;

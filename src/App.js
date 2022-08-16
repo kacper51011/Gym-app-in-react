@@ -3,6 +3,7 @@ import ModalForm from "./components/ModalForm";
 import "./App.css";
 import Tool from "./components/Tool";
 import Header from "./components/Header";
+import Navbar from "./components/Navbar";
 
 function App() {
   const [person, setPersonData] = useState();
@@ -11,6 +12,7 @@ function App() {
   return (
     <div className="App">
       <Header person={person ? person.name : null} />
+      <Navbar />
 
       {!modalVis && (
         <ModalForm
