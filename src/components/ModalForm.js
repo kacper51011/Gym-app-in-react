@@ -41,7 +41,6 @@ function ModalForm({ modalVis, setData }) {
               type="text"
               name="name"
               id="name"
-              placeholder="name"
               className="text--input"
               onChange={handleChange}
               value={values.name}

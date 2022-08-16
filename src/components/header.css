@@ -1,8 +1,0 @@
-header {
-  height: 15vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: blue;
-  width: 100vw;
-}

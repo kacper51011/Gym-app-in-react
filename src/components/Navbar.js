@@ -3,9 +3,12 @@ import * as faIcon from "react-icons/fa";
 
 function Navbar() {
   return (
-    <div className="navbar">
-      <div className="navbar--icon">
-        <faIcon.FaBars />
+    <div>
+      <div className="navbar">
+        <div className="menu--title">MENU</div>
+        <div className="navbar--item">asd</div>
+        <div className="navbar--item">asd</div>
+        <div className="navbar--item">asd</div>
       </div>
     </div>
   );
