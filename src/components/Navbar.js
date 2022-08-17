@@ -11,7 +11,7 @@ function Navbar() {
           {navbarData.map((item) => {
             return (
               <li key={item.id} className={item.cName}>
-                <Link to={item.path}>
+                <Link to={item.path} className={item.cName}>
                   {item.icon}
                   <span>{item.title}</span>
                 </Link>

@@ -114,6 +114,7 @@ body {
   align-items: center;
   flex-basis: auto;
   background-color: var(--primary-color);
+  text-decoration: none;
 }
 
 .menu--title {
@@ -125,10 +126,17 @@ body {
   font-weight: 600;
   letter-spacing: 0.3rem;
 }
+.navbar--list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
 .navbar--item {
   color: var(--text-color);
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   width: 60%;
   margin-top: 1vw;

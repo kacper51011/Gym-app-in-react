@@ -4,6 +4,10 @@ import "./App.css";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import MyRecords from "./Pages/MyRecords";
+import Workouts from "./Pages/Workouts";
+import Home from "./Pages/Home";
+import Exercises from "./Pages/Exercises";
 
 function App() {
   const [person, setPersonData] = useState();
@@ -18,7 +22,15 @@ function App() {
           setData={setPersonData}
         ></ModalForm>
       )}
-      <Navbar />
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" exact component={<Home />} />
+          <Route path='/Exercises"' component={<Exercises />} />
+          <Route path='/Workouts"' component={<Workouts />} />
+          <Route path='"/MyRecords"' component={<MyRecords />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
