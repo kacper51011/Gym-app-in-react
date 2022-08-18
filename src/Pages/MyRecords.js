@@ -1,7 +1,7 @@
 import React from "react";
 
 const MyRecords = () => {
-  return <div>MyRecords</div>;
+  return <div className="myrecords">MyRecords</div>;
 };
 
 export default MyRecords;

@@ -12,19 +12,19 @@ export const navbarData = [
   },
   {
     title: "EXERCISES",
-    path: "/Exercises",
+    path: "Exercises",
     icon: <BiIcons.BiBody />,
     cName: "navbar--item",
   },
   {
     title: "WORKOUTS",
-    path: "/Workouts",
+    path: "Workouts",
     icon: <FaIcons.FaDumbbell />,
     cName: "navbar--item",
   },
   {
-    title: "MY RECORDS",
-    path: "/MyRecords",
+    title: "RECORDS",
+    path: "Records",
     icon: <FaIcons.FaBookOpen />,
     cName: "navbar--item",
   },

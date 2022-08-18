@@ -25,10 +25,10 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" exact component={<Home />} />
-          <Route path='/Exercises"' component={<Exercises />} />
-          <Route path='/Workouts"' component={<Workouts />} />
-          <Route path='"/MyRecords"' component={<MyRecords />} />
+          <Route path="/" element={<Home />} />
+          <Route path="Exercises" element={<Exercises />} />
+          <Route path="Workouts" element={<Workouts />} />
+          <Route path="Records" component={<MyRecords />} />
         </Routes>
       </Router>
     </div>
