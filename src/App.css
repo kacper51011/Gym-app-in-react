@@ -11,7 +11,7 @@
 }
 
 body {
-  min-height: 200vh;
+  min-height: 100vh;
   background-color: var(--text-color);
 }
 
@@ -22,7 +22,7 @@ body {
   min-width: 30vw;
   max-width: 50vw;
   min-height: 50vh;
-  top: 30vh;
+  top: 20vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -106,7 +106,7 @@ body {
 .navbar {
   position: fixed;
   right: 4vw;
-  top: 4vw;
+  top: 7.5vh;
   width: 16vw;
   height: 50vh;
   border-radius: 15%;
@@ -144,7 +144,6 @@ body {
   padding: 1rem 1rem;
   margin-top: 1vw;
   text-shadow: 0px 0px 2px var(--text-color);
-  border-radius: 15%;
 }
 
 .navbar--item:hover {
@@ -153,17 +152,18 @@ body {
 
 .navbar--button {
   position: fixed;
-  top: 3vw;
+  top: 7.5vh;
   right: 3vw;
-  width: 4vw;
-  height: 4vw;
+  width: calc(3vw + 20px);
+  height: calc(3vw + 20px);
   background-color: var(--text-color);
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 0.3vw solid var(--primary-color);
+  border: 0.2vw solid var(--primary-color);
   border-radius: 45%;
   transform: translateY(-50%) translateX(50%);
   z-index: 100;
   cursor: pointer;
+  font-size: 1.7rem;
 }
