@@ -8,11 +8,16 @@ import MyRecords from "./Pages/MyRecords";
 import Workouts from "./Pages/Workouts";
 import Home from "./Pages/Home";
 import Exercises from "./Pages/Exercises";
+import NavbarButton from "./components/NavbarButton";
 
 function App() {
   const [person, setPersonData] = useState();
   const [modalVis, setModalVisibility] = useState();
+  const [navVis, setNavbarVisibility] = useState(false)
 
+  const clickNavbarButton = function() {
+    setNavbarVisibility(!navVis)
+  }
   return (
     <div className="App">
       <Header person={person ? person.name : null} />
@@ -22,8 +27,9 @@ function App() {
           setData={setPersonData}
         ></ModalForm>
       )}
+      <NavbarButton setNavVis={clickNavbarButton}/>
       <Router>
-        <Navbar />
+        {navVis && <Navbar /> }
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="Exercises" element={<Exercises />} />

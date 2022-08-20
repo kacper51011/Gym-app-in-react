@@ -1,6 +1,7 @@
 import React from "react";
 import { navbarData } from "./NavbarData";
 import { Link } from "react-router-dom";
+import * as FiIcons from "react-icons/fi"
 
 const linkStyle = {
   display: "flex",
@@ -15,7 +16,7 @@ const linkStyle = {
 
 function Navbar() {
   return (
-    <div>
+    <>
       <div className="navbar">
         <div className="menu--title">MENU</div>
         <ul className="navbar--list">
@@ -31,7 +32,7 @@ function Navbar() {
           })}
         </ul>
       </div>
-    </div>
+    </>
   );
 }
 
