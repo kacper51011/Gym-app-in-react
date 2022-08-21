@@ -20,7 +20,7 @@
     margin-top: 0vw;
     width: 100vw;
     height: 85vh;
-    background-image: linear-gradient(to right bottom, #8d99aeb4 , #2b2d42b4), url(../images/homeimage.jpg);
+    background-image: linear-gradient(to right bottom, #bdc4d098 , #f3f3f494), url(../images/homeimage.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -28,15 +28,17 @@
 .image--button {
     margin-bottom: 10vh;
     width: 25vw;
-    height: 8vw;
+    height: 10vw;
     border: none;
     text-align: center;
     font-size: calc(3.5vw);
-    letter-spacing: 0.2vw;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    border-radius: 20px;
-    background-color: var(--third-color);
-    color: var(--text-color);
+    letter-spacing: 0.1vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    border-radius: 15px;
+    background-image: linear-gradient(to right bottom, #f3f7f8, #8d99ae);
+    color: var(--primary-color);
     line-height: 110%;
     cursor: pointer;
+    box-shadow: 0px 0px 37px 10px rgba(66, 68, 90, 1);
 }

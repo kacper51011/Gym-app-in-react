@@ -1,0 +1,9 @@
+.addworkoutbutton {
+    font-size: 40px;
+    width: 4vw;
+    height: 4vw;
+    border-radius: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
