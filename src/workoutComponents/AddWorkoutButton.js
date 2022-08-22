@@ -2,10 +2,10 @@ import React from 'react'
 import * as RiIcons from "react-icons/ri"
 import "../Pages/workouts.css"
 
-const AddWorkoutButton = () => {
+const AddWorkoutButton = (props) => {
   return (
   <>
-    <button className='addworkoutbutton'><RiIcons.RiAddFill/></button>
+    <button className='addworkoutbutton' onClick={props.showNewWorkout}><RiIcons.RiAddFill/></button>
   </>
   )
 }

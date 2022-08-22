@@ -13,35 +13,48 @@
 
 }
 
-.addworkoutbutton {
-    font-size: 40px;
-    width: 4vw;
-    height: 4vw;
-    border-radius: 45%;
-    margin-top: 5vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    background-color: var(--third-color);
-    color: var(--text-color);
-}
-
 .workoutscontainer {
     width: 60vw;
     min-height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    padding: 30px;
     align-items: center;
     background-color: var(--second-color);
     border: 0.5vw solid var(--primary-color);
     margin-top: 10vh;
+    margin-bottom: 5vh;
 }
 
 .workoutitem {
     width: 90%;
     background-color: #2b2d42;
-    height: 10vh;
+    min-height: 20vh;
     margin-top: 2vh;
+    border-radius: 20px;
+}
+.addworkoutbutton {
+    font-size: 40px;
+    width: 4vw;
+    height: 4vw;
+    border-radius: 45%;
+    margin-top: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: var(--third-color);
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.workoutform{
+    margin-top: 5vh;
+    height: 40vh;
+    width: 90%;
+    background-color: #ef233c;
+    border-radius: 20px;
+    
+
 }

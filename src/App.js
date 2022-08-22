@@ -34,7 +34,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="Exercises" element={<Exercises />} />
           <Route path="Workouts" element={<Workouts />} />
-          <Route path="Records" component={<MyRecords />} />
+          <Route path="Records" element={<MyRecords />} />
         </Routes>
       </Router>
     </div>
