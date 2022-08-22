@@ -1,9 +1,47 @@
+:root {
+    --primary-color: #2b2d42;
+    --text-color: #f3f7f8;
+    --second-color: #8d99ae;
+    --third-color: #ef233c;
+  }
+
+
+.workouts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
 .addworkoutbutton {
     font-size: 40px;
     width: 4vw;
     height: 4vw;
     border-radius: 45%;
+    margin-top: 5vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
+    background-color: var(--third-color);
+    color: var(--text-color);
+}
+
+.workoutscontainer {
+    width: 60vw;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--second-color);
+    border: 0.5vw solid var(--primary-color);
+    margin-top: 10vh;
+}
+
+.workoutitem {
+    width: 90%;
+    background-color: #2b2d42;
+    height: 10vh;
+    margin-top: 2vh;
 }
