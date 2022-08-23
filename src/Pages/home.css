@@ -24,9 +24,30 @@
     background-size: cover;
     background-position: center;
 }
+.cards--container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+    
+}
+
+.card {
+    font-size: calc(2vw + 10px);
+    width: calc(25vw + 2rem);
+    height: 50vh;
+    background-color: #2b2d42;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    border-radius: 20px;
+}
+.card > span {
+    display: hidden;
+}
 
 .image--button {
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
     width: 25vw;
     height: 10vw;
     border: none;

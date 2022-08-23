@@ -55,6 +55,16 @@
     width: 90%;
     background-color: #ef233c;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1vw;
     
+
+}
+.workoutform--row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 
 }
