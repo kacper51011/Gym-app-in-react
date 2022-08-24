@@ -15,16 +15,17 @@
 .image--container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-around;
     align-items: center;
     margin-top: 0vw;
     width: 100vw;
-    height: 85vh;
+    height: 120vh;
     background-image: linear-gradient(to right bottom, #bdc4d098 , #f3f3f494), url(../images/homeimage.jpg);
     background-size: cover;
     background-position: center;
 }
 .cards--container {
+    top: 20vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -34,16 +35,36 @@
 }
 
 .card {
-    font-size: calc(2vw + 10px);
-    width: calc(25vw + 2rem);
-    height: 50vh;
-    background-color: #2b2d42;
-    margin-left: 3vw;
-    margin-right: 3vw;
+    width: calc(15vw + 2rem);
+    height: 45vh;
+    background-image: linear-gradient(to right bottom, var(--primary-color), var(--second-color), var(--text-color));
+    text-align: center;
     border-radius: 20px;
+    transition-duration: 1s;
+    margin: 2vh 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2vw;
+    box-shadow: 0px 0px 5px 10px rgba(66, 68, 90, 1);
+
 }
-.card > span {
-    display: hidden;
+.card--image{
+    font-size: calc(5vw + 5px);
+}
+
+.card--text{
+    display: none;
+    font-size: calc(1vw + 8px);
+    font-weight: 600;
+}
+.card:hover{
+    justify-content: space-around;
+
+}
+.card:hover > .card--text{
+    display: block;
 }
 
 .image--button {

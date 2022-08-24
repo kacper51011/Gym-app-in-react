@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import "./home.css"
 import { Link } from "react-router-dom"
 import * as FaIcons from "react-icons/fa";
@@ -11,51 +11,23 @@ const homeButtonLinkStyle= {
 }
 
 const Home = () => {
-  const [cardsTextIsVisible, toggleCardTextVisible] = useState({
-    firstCard: false,
-    secondCard: false,
-    thirdCard: false
-  })
-  const showFirstText = () => {
-    toggleCardTextVisible(prevToggles => {
-      return {
-        ...prevToggles,
-        firstCard: !prevToggles.firstCard,
-      }
-    })
-  }
-  const showSecondText = () => {
-    toggleCardTextVisible(prevToggles => {
-      return {
-        ...prevToggles,
-        secondCard: !prevToggles.secondCard,
-      }
-    })
-  }
-  const showThirdText = () => {
-    toggleCardTextVisible(prevToggles => {
-      return {
-        ...prevToggles,
-        thirdCard: !prevToggles.thirdCard,
-      }
-    })
-  }
+
 
   return (
   <div className="home">
     <div className="image--container">
       <div className="cards--container">
-        <div className="card" onClick={showFirstText}>
-          <BiIcons.BiBody />
-          {cardsTextIsVisible.firstCard && <span >asda sdsad sadad asda sd</span>}
+        <div className="card">
+          <div className="card--image"><BiIcons.BiBody /></div>
+          <div className="card--text">learn about the exercises!</div>
         </div>
-        <div className="card" onClick={showSecondText}>
-          <FaIcons.FaDumbbell />
-          {cardsTextIsVisible.secondCard && <span >asda sdsad sadad asda sd</span>}
+        <div className="card">
+          <div className="card--image"><FaIcons.FaDumbbell /></div>
+          <div className="card--text">create your training schedule!</div>
         </div>
-        <div className="card" onClick={showThirdText}>
-          <FaIcons.FaBookOpen />
-          {cardsTextIsVisible.thirdCard && <span >asda sdsad sadad asda sd</span>}
+        <div className="card">
+          <div className="card--image"><FaIcons.FaBookOpen /></div>
+          <div className="card--text">check your best results!</div>
         </div>
       </div>
       <button className="image--button"><Link to={"Workouts"} style={homeButtonLinkStyle}> Create your workout plan</Link></button>
