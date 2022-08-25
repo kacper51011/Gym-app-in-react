@@ -1,4 +1,18 @@
-.exercises {
-  font-size: 300px;
+.exercises{
+  width: 100vw;
+  min-height: 85vh;}
+
+.exercise--container{
+  width: 100vw;
+  height: 85vh;
+  display: grid;
+  grid-template-columns: 20vw 20vw 20vw;
+  grid-template-rows: 20vw 20vw 20vw;
+  
+}
+.exercise--item {
+  background-color: brown;
   text-align: center;
+  height: 10vh;
+  width: 25vw;
 }

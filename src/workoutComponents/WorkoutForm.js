@@ -1,55 +1,26 @@
-import React from 'react'
+import React from "react";
 
 const WorkoutForm = (props) => {
   return (
-    <div className='workoutform'>
-      <div className='workoutform--row'>
-        <div>
-          <label>asd</label>
-          <input></input>
-        </div>
-        <div>
-          <label>asd</label>
-          <input></input>
-        </div>
-        <div>
-          <label>asd</label>
-          <input></input>
-        </div>
+    <form className="workoutform">
+      <h2>Add a new workout</h2>
+      <input name="workoutName" placeholder="Name your workout" />
+      <input name="workoutDate" placeholder="Write your workout days" />
+      <label>type of exercises</label>
+      <select>
+        <option>Workout</option>
+        <option>Cardio</option>
+      </select>
+      <div className="button--bar">
+        <button className="delete--button" onClick={props.hideNewWorkout}>
+          DELETE
+        </button>
+        <button className="save--button" onClick={props.hideNewWorkout}>
+          SAVE
+        </button>
       </div>
-      <div className='workoutform--row'>
-        <div>
-          <label>asd</label>
-          <input></input>
-        </div>
-        <div>
-          <label>asd</label>
-          <input></input>
-        </div>
-        <div>
-          <label>asd</label>
-          <select>
-            <option></option>
-            <option></option>
-            <option></option>
-          </select>
-        </div> 
-      </div>
-      <div className='workoutform--row'>
-        <div>
-          <label>asd</label>
-         <select>
-            <option></option>
-           <option></option>
-          </select>
-        </div>
-        <button>delete</button>
-        <button onClick={props.hideNewWorkout}>Save</button>
-      </div>
-        
+    </form>
+  );
+};
 
-    </div>
-  )
-}
-
-export default WorkoutForm
+export default WorkoutForm;
