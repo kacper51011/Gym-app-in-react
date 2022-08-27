@@ -1,19 +1,14 @@
 const exerciseData = [
-  "abdominals",
-  "abductors",
-  "adductors",
-  "biceps",
-  "calves",
+  "back",
+  "cardio",
   "chest",
-  "forearms",
-  "glutes",
-  "hamstrings",
-  "lats",
-  "lower back",
-  "middle back",
+  "lower arms",
+  "lower legs",
   "neck",
-  "quadriceps",
-  "traps",
-  "triceps",
+  "shoulders",
+  "upper arms",
+  "upper legs",
+  "waist",
 ];
+
 export default exerciseData;
