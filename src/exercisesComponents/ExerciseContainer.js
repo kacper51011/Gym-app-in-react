@@ -12,9 +12,9 @@ const ExerciseContainer = () => {
       <div className="exerciseItemCard--container">
         {exercises.map((exercise) => (
           <ExerciseItemCard
+            key={exercise.id}
             gif={exercise.gifUrl}
             eName={exercise.name}
-            muscle={exercise.target}
           />
         ))}
       </div>
