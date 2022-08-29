@@ -4,7 +4,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import MyRecords from "./Pages/MyRecords";
+import Favourites from "./Pages/Favourites";
 import Workouts from "./Pages/Workouts";
 import Home from "./Pages/Home";
 import Exercises from "./Pages/Exercises";
@@ -13,11 +13,11 @@ import NavbarButton from "./components/NavbarButton";
 function App() {
   const [person, setPersonData] = useState();
   const [modalVis, setModalVisibility] = useState();
-  const [navVis, setNavbarVisibility] = useState(false)
+  const [navVis, setNavbarVisibility] = useState(false);
 
-  const clickNavbarButton = function() {
-    setNavbarVisibility(!navVis)
-  }
+  const clickNavbarButton = function () {
+    setNavbarVisibility(!navVis);
+  };
   return (
     <div className="App">
       <Header person={person ? person.name : null} />
@@ -27,14 +27,14 @@ function App() {
           setData={setPersonData}
         ></ModalForm>
       )}
-      <NavbarButton setNavVis={clickNavbarButton}/>
+      <NavbarButton setNavVis={clickNavbarButton} />
       <Router>
-        {navVis && <Navbar /> }
+        {navVis && <Navbar />}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="Exercises" element={<Exercises />} />
           <Route path="Workouts" element={<Workouts />} />
-          <Route path="Records" element={<MyRecords />} />
+          <Route path="Favourites" element={<Favourites />} />
         </Routes>
       </Router>
     </div>

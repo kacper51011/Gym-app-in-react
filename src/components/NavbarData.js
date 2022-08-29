@@ -23,8 +23,8 @@ export const navbarData = [
     cName: "navbar--item",
   },
   {
-    title: "RECORDS",
-    path: "Records",
+    title: "FAVOURITES",
+    path: "Favourites",
     icon: <FaIcons.FaBookOpen />,
     cName: "navbar--item",
   },
