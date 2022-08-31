@@ -4,48 +4,11 @@ import AddWorkoutButton from "./AddWorkoutButton";
 import WorkoutExercises from "./WorkoutExercises";
 import WorkoutForm from "./WorkoutForm";
 import WorkoutItem from "./WorkoutItem";
-import uuid from "react-uuid";
+import workoutData from "./WorkoutData";
 
 const WorkoutsContainer = () => {
   const [showWorkoutForm, setForm] = useState(false);
-  const [workouts, setWorkouts] = useState([
-    {
-      workoutName: "test",
-      componentId: uuid(),
-      workoutDays: "test",
-      workoutType: "test",
-      exercises: [
-        {
-          exerciseName: "test",
-          exerciseSets: "test",
-          exerciseReps: "test",
-          exerciseWeight: "test",
-          componentId: uuid(),
-        },
-        {
-          exerciseName: "test2",
-          exerciseSets: "test2",
-          exerciseReps: "test2",
-          exerciseWeight: "test2",
-          componentId: uuid(),
-        },
-        {
-          exerciseName: "test3",
-          exerciseSets: "test3",
-          exerciseReps: "test3",
-          exerciseWeight: "test3",
-          componentId: uuid(),
-        },
-        {
-          exerciseName: "test4",
-          exerciseSets: "test4",
-          exerciseReps: "test4",
-          exerciseWeight: "test4",
-          componentId: uuid(),
-        },
-      ],
-    },
-  ]);
+  const [workouts, setWorkouts] = useState(workoutData);
 
   const toggleForm = () => {
     setForm(!showWorkoutForm);
@@ -58,6 +21,7 @@ const WorkoutsContainer = () => {
           workoutName={workout.workoutName}
           workoutDays={workout.workoutDays}
           workoutType={workout.workoutType}
+          key={workout.componentId}
           children={workout.exercises.map((exercise) => (
             <WorkoutExercises
               exerciseName={exercise.exerciseName}
@@ -84,7 +48,13 @@ const WorkoutsContainer = () => {
           ))}
         />
       ))}
-      {showWorkoutForm && <WorkoutForm hideNewWorkout={toggleForm} />}
+      {showWorkoutForm && (
+        <WorkoutForm
+          hideNewWorkout={toggleForm}
+          submitNewWorkout={setWorkouts}
+          closeModal={setForm}
+        />
+      )}
       {!showWorkoutForm && <AddWorkoutButton showNewWorkout={toggleForm} />}
     </div>
   );

@@ -12,7 +12,7 @@ const WorkoutExercises = (props) => {
           <input
             type="text"
             name="exerciseName"
-            onChange={props.SetName}
+            onChange={props.setName}
             defaultValue={props.exerciseName}
           />
           <label for="sets">Sets:</label>
@@ -47,9 +47,9 @@ const WorkoutExercises = (props) => {
       {!editMode && (
         <div className="workoutExercises">
           <div>{props.exerciseName}</div>
-          <div>Sets: {props.sets}</div>
-          <div>Reps: {props.reps}</div>
-          <div>Weight: {props.weight}</div>
+          <div>{props.sets}</div>
+          <div>{props.reps}</div>
+          <div>{props.weight}</div>
           <div className="buttonContainer">
             <button onClick={(e) => setEditMode(true)}>EDIT</button>
             <button onClick={(e) => setEditMode(true)}>DELETE</button>
