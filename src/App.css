@@ -8,6 +8,7 @@
 
 * {
   font-family: sans-serif;
+  overflow-x: hidden;
 }
 
 body {
@@ -19,9 +20,9 @@ body {
 
 .modalForm {
   position: fixed;
-  min-width: 30vw;
+  min-width: calc(25vw + 150px);
   max-width: 50vw;
-  min-height: 50vh;
+  min-height: calc(40vh + 20px);
   top: 20vh;
   display: flex;
   flex-direction: column;
@@ -32,12 +33,13 @@ body {
   background-color: var(--third-color);
   color: var(--primary-color);
   font-weight: bold;
-
+  padding: 1vh 0.2vw 3vh 0.2vw;
   text-align: center;
   font-family: sans-serif;
 }
+
 .modalForm > button {
-  padding: 1rem 3rem;
+  padding:1rem 3rem;
   margin-bottom: 1vw;
   border-radius: 5%;
   font-weight: bold;
@@ -45,7 +47,9 @@ body {
   box-shadow: 0px 0px 5px 0px rgba(66, 68, 90, 1);
   background-color: #f3f7f8;
 }
-
+.modalForm > label {
+  font-size: calc(1.2vw + 8px);
+}
 .modalForm > button:hover {
   background-color: #b2bcce;
   cursor: pointer;
@@ -57,6 +61,7 @@ body {
 
 .modalForm > h2 {
   margin-top: 5vh;
+  margin-bottom: 1vh;
 }
 
 .modalForm > div {
@@ -74,6 +79,7 @@ body {
 }
 #gymExp1 {
   padding: 0.5vw;
+  margin-bottom: 3vh;
 }
 
 /* header */
@@ -82,13 +88,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 15vh;
+  height: calc(10vh + 30px);
   background-color: var(--primary-color);
   color: #f3f7f8;
   width: 100vw;
 }
 .greeting {
-  font-size: calc(0.5rem + 1vw);
+  font-size: calc(1.7vw + 3px);
+  font-weight: 700;
   margin-left: 2vw;
 }
 
@@ -96,7 +103,7 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  font-size: calc(2rem + 2vw);
+  font-size: calc(1rem + 2.5vw);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   text-shadow: 0px 0px 4px var(--text-color);
 }
@@ -105,10 +112,10 @@ body {
 
 .navbar {
   position: fixed;
-  right: 4vw;
+  right: calc(4vw + 30px);
   top: 7.5vh;
-  width: 16vw;
-  height: 60vh;
+  width: calc(16vw + 30px);
+  height: calc(25vw + 50px);
   border-radius: 15%;
   border-top-right-radius: 0;
   display: flex;
@@ -117,22 +124,25 @@ body {
   flex-basis: auto;
   background-color: var(--third-color);
   text-decoration: none;
+
 }
 
 .menu--title {
-  margin: 1vw 1vw;
+  margin: 1vh 1vw;
   color: var(--text-color);
   text-align: center;
   font-size: calc(0.8rem + 2.5vw);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: 600;
   letter-spacing: 0.3rem;
+  overflow:hidden;
 }
 .navbar--list {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  overflow: hidden;
 }
 .navbar--item {
   display: flex;
@@ -144,14 +154,15 @@ body {
   padding: 1rem 1rem;
   margin-top: 1vw;
   text-shadow: 0px 0px 2px var(--text-color);
+  overflow: hidden;
 }
 
 .navbar--button {
   position: fixed;
   top: 7.5vh;
-  right: 3vw;
+  right: calc(3vw + 20px);
   width: calc(3vw + 20px);
-  height: calc(3vw + 20px);
+  height: calc(3vw + 22px);
   background-color: var(--text-color);
   display: flex;
   justify-content: center;

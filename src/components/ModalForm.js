@@ -48,7 +48,7 @@ function ModalForm({ modalVis, setData }) {
             {errors.name && <span>{errors.name}</span>}
           </div>
 
-          <div>
+          <div className="modal--gymExp">
             <label htmlFor="gymExp">
               Gym training experience <br></br>in years:
             </label>
