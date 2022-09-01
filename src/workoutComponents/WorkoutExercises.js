@@ -56,7 +56,7 @@ const WorkoutExercises = (props) => {
             <button onClick={(e) => setEditMode(true)}>
               <aiIcons.AiTwotoneEdit />
             </button>
-            <button onClick={(e) => setEditMode(true)}>
+            <button onClick={props.deleteExercise}>
               <aiIcons.AiFillDelete />
             </button>
           </div>

@@ -28,6 +28,7 @@ const WorkoutsContainer = () => {
               sets={exercise.exerciseSets}
               reps={exercise.exerciseReps}
               weight={exercise.exerciseWeight}
+              key={exercise.componentId}
               setName={(e) => {
                 exercise.exerciseName = e.target.value;
                 setWorkouts([...workouts]);
@@ -43,6 +44,18 @@ const WorkoutsContainer = () => {
               setWeights={(e) => {
                 exercise.exerciseWeight = e.target.value;
                 setWorkouts([...workouts]);
+              }}
+              deleteExercise={() => {
+                const newData = workouts.map((stateItem) => {
+                  return {
+                    ...stateItem,
+                    exercises: stateItem.exercises.filter(
+                      (otherExercises) =>
+                        otherExercises.componentId !== exercise.componentId
+                    ),
+                  };
+                });
+                setWorkouts(newData);
               }}
             />
           ))}
