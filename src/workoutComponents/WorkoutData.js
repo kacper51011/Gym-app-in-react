@@ -2,7 +2,7 @@ import uuid from "react-uuid";
 
 const workoutData = [
   {
-    workoutName: "test",
+    workoutName: "Workout based on your experience",
     componentId: uuid(),
     workoutDays: "test",
     workoutType: "test",

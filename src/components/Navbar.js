@@ -24,7 +24,7 @@ function Navbar() {
               <li key={index} className={item.cName}>
                 <Link to={item.path} style={linkStyle}>
                   {item.icon}
-                  <span>{item.title}</span>
+                  <span> {item.title}</span>
                 </Link>
               </li>
             );

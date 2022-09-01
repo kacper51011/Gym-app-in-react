@@ -21,17 +21,15 @@
 
 .exerciseFilterBar{
   margin-top: 10vh;
-  width: 50vw;
-  height: calc(5vh + 20px);
+  min-width: 50%;
+  height: calc(3vw + 20px);
   display: flex;
   flex-direction: row;
   align-items: center;
-  border-collapse: collapse;
-  border-radius: 20px;
   
 }
 .barSelect{
-  font-size: calc(0.7vw + 10px);
+  font-size: calc(0.9vw + 10px);
   width: 40vw;
   height: 100%;
   border-collapse: collapse;
@@ -43,12 +41,13 @@ optgroup{
   font-size: calc(0.7vw + 10px);
 }
 .searchButton{
-  width:10vw;
+  width:20%;
   height: 100%;
   border: none;
   text-decoration: none;
   border-collapse: collapse;
   cursor: pointer;
+  font-size: calc(0.5vw + 7px);
 
 }
 
@@ -60,7 +59,7 @@ optgroup{
   min-height: 85vh;
   display: grid;
   grid-template-columns: 20vw 20vw 20vw 20vw;
-  grid-auto-rows: 55vh;
+  grid-auto-rows: calc(30vw + 20px);
   justify-content: space-around;
   row-gap: 5vh;
   
@@ -74,6 +73,8 @@ optgroup{
   align-items: center;
   background-color: white;
   text-align: center;
+  overflow: hidden;
+  font-size: calc(0.5vw + 8px);
 }
 
 .star--container{
@@ -83,6 +84,8 @@ optgroup{
   font-size: calc(9px + 2vw);
   color: gold;
   cursor: pointer;
+  overflow: hidden;
+  position: absolute;
 }
 .exercise--gif{
   height: 85%;
@@ -93,9 +96,15 @@ optgroup{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   font-weight: 600;
   text-align: center;
   margin-bottom: 2vh;
+  overflow-y:visible;
+  min-height: 15%;
+  font-size: calc(0.5vw + 8px)
+}
+.exercise--propertiesContainer > div {
+  overflow-y: visible;
 }
 

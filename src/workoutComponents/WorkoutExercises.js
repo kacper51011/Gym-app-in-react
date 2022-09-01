@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import * as tiIcons from "react-icons/ti";
+import * as aiIcons from "react-icons/ai";
 
 const WorkoutExercises = (props) => {
   const [editMode, setEditMode] = useState(false);
@@ -7,7 +9,7 @@ const WorkoutExercises = (props) => {
     <>
       {editMode && (
         <div className="workoutExercises">
-          <label for="ExerciseName">Exercise:</label>
+          <label htmlFor="ExerciseName">Exercise:</label>
 
           <input
             type="text"
@@ -15,21 +17,21 @@ const WorkoutExercises = (props) => {
             onChange={props.setName}
             defaultValue={props.exerciseName}
           />
-          <label for="sets">Sets:</label>
+          <label htmlFor="sets">Sets:</label>
           <input
             type="text"
             name="sets"
             onChange={props.setSets}
             defaultValue={props.sets}
           />
-          <label for="reps">reps:</label>
+          <label htmlFor="reps">reps:</label>
           <input
             type="text"
             name="reps"
             onChange={props.setReps}
             defaultValue={props.reps}
           />
-          <label for="weight">weight:</label>
+          <label htmlFor="weight">weight:</label>
           <input
             type="text"
             name="weight"
@@ -38,7 +40,7 @@ const WorkoutExercises = (props) => {
           />
           <div className="buttonContainer">
             <button type="submit" onClick={(e) => setEditMode(false)}>
-              SAVE
+              <tiIcons.TiTick />
             </button>
           </div>
         </div>
@@ -51,8 +53,12 @@ const WorkoutExercises = (props) => {
           <div>{props.reps}</div>
           <div>{props.weight}</div>
           <div className="buttonContainer">
-            <button onClick={(e) => setEditMode(true)}>EDIT</button>
-            <button onClick={(e) => setEditMode(true)}>DELETE</button>
+            <button onClick={(e) => setEditMode(true)}>
+              <aiIcons.AiTwotoneEdit />
+            </button>
+            <button onClick={(e) => setEditMode(true)}>
+              <aiIcons.AiFillDelete />
+            </button>
           </div>
         </div>
       )}
