@@ -33,6 +33,7 @@ const ExerciseFilterBar = (props) => {
           <option value={exerciseData[7]}>{exerciseData[7]}</option>
           <option value={exerciseData[8]}>{exerciseData[8]}</option>
           <option value={exerciseData[9]}>{exerciseData[9]}</option>
+          <option value={exerciseData[10]}>{exerciseData[10]}</option>
         </optgroup>
       </select>
       <button className="searchButton" onClick={handleSearch}>

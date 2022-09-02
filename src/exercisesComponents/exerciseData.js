@@ -1,4 +1,5 @@
 const exerciseData = [
+  "",
   "back",
   "cardio",
   "chest",

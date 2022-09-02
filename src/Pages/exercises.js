@@ -2,10 +2,13 @@ import React from "react";
 import ExerciseContainer from "../exercisesComponents/ExerciseContainer";
 import "./exercises.css";
 
-const Exercises = () => {
+const Exercises = ({ setFavourites, favouritesData }) => {
   return (
     <div className="exercises">
-      <ExerciseContainer />
+      <ExerciseContainer
+        setFavourites={setFavourites}
+        favouritesData={favouritesData}
+      />
     </div>
   );
 };

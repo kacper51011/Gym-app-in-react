@@ -1,22 +1,28 @@
-import React, { useState } from "react";
-import favouritesData from "../favouritesComponents/favouritesData";
+import React from "react";
 import ExerciseItemCard from "../exercisesComponents/ExerciseItemCard";
+import "./favourites.css";
 
-const MyRecords = () => {
-  const [favData, setFavData] = useState(favouritesData);
+const Favourites = ({ setFavourites, favouritesData }) => {
   return (
-    <div className="myrecords">
-      {favData.map((exercise) => (
+    <div className="exerciseItemCard--container favourites">
+      {favouritesData.map((exercise) => (
         <ExerciseItemCard
-          addFunction={(exercise) => favData.push(exercise)}
-          deleteFunction={(exercise) => favData.filter((x) => x !== exercise)}
+          addFunction={() =>
+            setFavourites((previousData) => [...previousData, exercise])
+          }
+          deleteFunction={() => {
+            const filtered = favouritesData.filter((x) => x.id !== exercise.id);
+            setFavourites(filtered);
+          }}
           key={exercise.id}
           gif={exercise.gifUrl}
           eName={exercise.name}
+          favValue={true}
+          starShow={false}
         />
       ))}
     </div>
   );
 };
 
-export default MyRecords;
+export default Favourites;

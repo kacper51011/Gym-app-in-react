@@ -2,27 +2,29 @@ import React, { useState } from "react";
 import * as aiIcons from "react-icons/ai";
 
 const ExerciseItemCard = (props) => {
-  const [favourite, toggleFavourite] = useState(false);
+  const [favourite, toggleFavourite] = useState(props.favValue);
 
   const addToFavourite = function () {
     props.addFunction();
-    toggleFavourite(true);
+    toggleFavourite(!favourite);
   };
 
   const deleteFromFavourite = function () {
     props.deleteFunction();
-    toggleFavourite(false);
+    toggleFavourite(!favourite);
   };
 
   return (
     <div className="exercise--itemCard">
-      <div className="star--container">
-        {favourite ? (
-          <aiIcons.AiFillStar onClick={deleteFromFavourite} />
-        ) : (
-          <aiIcons.AiOutlineStar onClick={addToFavourite} />
-        )}
-      </div>
+      {props.starShow && (
+        <div className="star--container">
+          {favourite ? (
+            <aiIcons.AiFillStar onClick={deleteFromFavourite} />
+          ) : (
+            <aiIcons.AiOutlineStar onClick={addToFavourite} />
+          )}
+        </div>
+      )}
       <img className="exercise--gif" src={props.gif} alt=""></img>
       <div className="exercise--propertiesContainer">
         <div>{props.eName}</div>

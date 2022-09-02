@@ -58,8 +58,8 @@ optgroup{
   width: 100vw;
   min-height: 85vh;
   display: grid;
-  grid-template-columns: 20vw 20vw 20vw 20vw;
-  grid-auto-rows: calc(30vw + 20px);
+  grid-template-columns: calc(18vw + 35px) calc(18vw + 35px) calc(18vw + 35px);
+  grid-auto-rows: calc(30vw + 40px);
   justify-content: space-around;
   row-gap: 5vh;
   
@@ -73,8 +73,7 @@ optgroup{
   align-items: center;
   background-color: white;
   text-align: center;
-  overflow: hidden;
-  font-size: calc(0.5vw + 8px);
+  font-size: calc(0.5vw + 4px);
 }
 
 .star--container{

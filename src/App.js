@@ -14,6 +14,7 @@ function App() {
   const [person, setPersonData] = useState();
   const [modalVis, setModalVisibility] = useState();
   const [navVis, setNavbarVisibility] = useState(false);
+  const [favourites, setFavourites] = useState([]);
 
   const clickNavbarButton = function () {
     setNavbarVisibility(!navVis);
@@ -32,9 +33,25 @@ function App() {
         {navVis && <Navbar />}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="Exercises" element={<Exercises />} />
+          <Route
+            path="Exercises"
+            element={
+              <Exercises
+                favouritesData={favourites}
+                setFavourites={setFavourites}
+              />
+            }
+          />
           <Route path="Workouts" element={<Workouts />} />
-          <Route path="Favourites" element={<Favourites />} />
+          <Route
+            path="Favourites"
+            element={
+              <Favourites
+                favouritesData={favourites}
+                setFavourites={setFavourites}
+              />
+            }
+          />
         </Routes>
       </Router>
     </div>
