@@ -30,7 +30,7 @@ const Home = () => {
             <div className="card--image">
               <FaIcons.FaBookOpen />
             </div>
-            <div className="card--text">Create your exercise database!</div>
+            <div className="card--text">Save your favourite exercises!</div>
           </div>
         </div>
         <button className="image--button">

@@ -14,55 +14,76 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: var(--second-color);
 
 }
 
 .workoutscontainer {
-    width: 95vw;
+    width: 100vw;
     min-height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 30px;
+    padding: 0;
     align-items: center;
-    background-color: var(--second-color);
-    border: 0.5vw solid var(--primary-color);
     margin-top: 10vh;
     margin-bottom: 5vh;
 }
 
 .workoutitem {
-    margin: 2.5vh 0;
-    width: 95%;
+    margin: 2.5vw 0;
+    width: 90%;
     background-color: var(--third-color);
     border: 2px var(--third-color) solid;
-    min-height: 35vh;
-    padding: 0.5vw 1vw;
+    min-height: calc(17.5vw + 40px);
+    padding: 1vw 1vw 2.5vw 1vw;
     border-radius: 20px;
     text-align: center;
     display: flex;
     flex-direction: column;
-    box-shadow: 0px 0px 20px -6px rgba(66, 68, 90, 1);
 }
-.workoutitem > h3{
-    letter-spacing: 0.05vw;
+.workoutitem-name{
+    font-size: calc(1.5vw + 9px);
+    font-weight: bold;
 }
 
 .workoutitem--row{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    position: relative;
+    width: 100%;
     font-size: calc(0.8vw + 5px);
+    height: 5vh;
+    overflow: hidden;
+}
+.workoutitem--row-first{
+    position: absolute;
+    left: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25%;
+}
+
+.workoutitem--row-second{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    
+}
+.workoutitem--row-third{
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .workoutExercises{
     position: relative;
     background-color: var(--text-color);
     height: calc(2vw + 7px);
-    padding: 1vh 1vw;
+    padding: 2.5vh 1vw;
     margin: 1vh 0;
     border-radius: 15px;
-    font-size: calc(0.6vw + 4px);
-    font-weight: 600;
+    font-size: calc(0.7vw + 9px);
+    font-weight: 500;
     font-family:Arial, Helvetica, sans-serif;
     overflow: hidden;
 
@@ -70,15 +91,15 @@
 
 }
 .workoutExercises > div > input{
-    font-size: calc(0.6vw + 4px);
+    font-size: calc(0.7vw + 9px);
     height: calc(2vw + 7px);
 
 }
 .exerciseFirstInput{
-    width: 15vw;
+    width: 20vw;
 }
 .exerciseSecondInput {
-    width: 2vw;
+    width: 5vw;
 }
 .exerciseThirdInput {
     width: 5vw;
@@ -89,7 +110,7 @@
 
 .workoutExercises-first{
     position: absolute;
-    left: 2%;
+    left: 1%;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -102,20 +123,20 @@
 }
 .workoutExercises-third{
     position: absolute;
-    left: 55%;
+    left: 50%;
     top: 50%;
     transform: translateY(-50%);
 
 }
 .workoutExercises-fourth{
-    left: 75%;
+    left: 70%;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
 
 }
 .workoutExercises-fifth{
-    right: 5%;
+    right: 2%;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);

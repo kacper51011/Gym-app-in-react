@@ -3,13 +3,15 @@ import React from "react";
 const WorkoutItem = (props) => {
   return (
     <div className="workoutitem">
-      <h3>{props.workoutName}</h3>
+      <div className="workoutitem-name">{props.workoutName}</div>
 
       <div className="exercises--container">{props.children}</div>
       <div className="workoutitem--row">
-        <div>Days: {props.workoutDays}</div>
-        <div>Type:{props.workoutType}</div>
-        <div>Exercises: {props.children.length}</div>
+        <div className="workoutitem--row-first">Days: {props.workoutDays}</div>
+        <div className="workoutitem--row-second">Type:{props.workoutType}</div>
+        <div className="workoutitem--row-third">
+          Exercises: {props.children.length}
+        </div>
       </div>
     </div>
   );

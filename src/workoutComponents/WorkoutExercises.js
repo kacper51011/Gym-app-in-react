@@ -10,7 +10,7 @@ const WorkoutExercises = (props) => {
       {editMode && (
         <div className="workoutExercises">
           <div className="workoutExercises-first">
-            <label htmlFor="ExerciseName">Exercise:</label>
+            <label htmlFor="ExerciseName">Ex...:</label>
 
             <input
               type="text"
