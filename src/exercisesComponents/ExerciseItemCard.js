@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import * as aiIcons from "react-icons/ai";
 
 const ExerciseItemCard = (props) => {
-  const [favourite, toggleFavourite] = useState(props.favValue);
+  const [favourite, toggleFavourite] = useState(props.isFavourite);
+
+  useEffect(() => {
+    toggleFavourite(props.isFavourite);
+  }, [props.isFavourite]);
 
   const addToFavourite = function () {
     props.addFunction();
@@ -18,7 +22,7 @@ const ExerciseItemCard = (props) => {
     <div className="exercise--itemCard">
       {props.starShow && (
         <div className="star--container">
-          {favourite ? (
+          {props.isFavourite ? (
             <aiIcons.AiFillStar onClick={deleteFromFavourite} />
           ) : (
             <aiIcons.AiOutlineStar onClick={addToFavourite} />

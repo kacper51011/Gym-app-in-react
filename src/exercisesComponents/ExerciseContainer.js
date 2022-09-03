@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
+import useLocalStorage from "../utils/useLocalStorage";
 import ExerciseFilterBar from "./ExerciseFilterBar";
 import ExerciseItemCard from "./ExerciseItemCard";
 
 const ExerciseContainer = ({ favouritesData, setFavourites }) => {
-  const [exercises, setExercises] = useState([]);
+  const [exercises, setExercises] = useLocalStorage("exercises", []);
   return (
     <>
       <div className="exercise--container">
@@ -27,6 +28,10 @@ const ExerciseContainer = ({ favouritesData, setFavourites }) => {
             eName={exercise.name}
             favValue={false}
             starShow={true}
+            favouritesData={favouritesData}
+            isFavourite={favouritesData.some(function (value) {
+              return value.id === exercise.id;
+            })}
           />
         ))}
       </div>

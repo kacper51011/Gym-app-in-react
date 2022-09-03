@@ -9,12 +9,13 @@ import Workouts from "./Pages/Workouts";
 import Home from "./Pages/Home";
 import Exercises from "./Pages/Exercises";
 import NavbarButton from "./components/NavbarButton";
+import useLocalStorage from "./utils/useLocalStorage";
 
 function App() {
-  const [person, setPersonData] = useState();
-  const [modalVis, setModalVisibility] = useState();
+  const [person, setPersonData] = useLocalStorage("personData", []);
+  const [modalVis, setModalVisibility] = useLocalStorage("modalVis", false);
   const [navVis, setNavbarVisibility] = useState(false);
-  const [favourites, setFavourites] = useState([]);
+  const [favourites, setFavourites] = useLocalStorage("fav", []);
 
   const clickNavbarButton = function () {
     setNavbarVisibility(!navVis);

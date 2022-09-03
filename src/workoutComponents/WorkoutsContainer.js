@@ -5,10 +5,11 @@ import WorkoutExercises from "./WorkoutExercises";
 import WorkoutForm from "./WorkoutForm";
 import WorkoutItem from "./WorkoutItem";
 import workoutData from "./WorkoutData";
+import useLocalStorage from "../utils/useLocalStorage";
 
 const WorkoutsContainer = () => {
   const [showWorkoutForm, setForm] = useState(false);
-  const [workouts, setWorkouts] = useState(workoutData);
+  const [workouts, setWorkouts] = useLocalStorage("workoutData", workoutData);
 
   const toggleForm = () => {
     setForm(!showWorkoutForm);

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import exerciseData from "./exerciseData";
 import { fetchData, fetchOptions } from "../utils/fetchData";
 

@@ -17,7 +17,6 @@ const Favourites = ({ setFavourites, favouritesData }) => {
           key={exercise.id}
           gif={exercise.gifUrl}
           eName={exercise.name}
-          favValue={true}
           starShow={false}
         />
       ))}
