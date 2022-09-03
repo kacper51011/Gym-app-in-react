@@ -8,7 +8,7 @@ export const fetchData = async (url, options) => {
 export const fetchOptions = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "c3344380a4msh79f85e3d9d6bf87p198f8fjsn549c3a88ee8c",
+    "X-RapidAPI-Key": process.env.REACT_APP_API_KEY,
     "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
   },
 };
