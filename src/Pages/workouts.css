@@ -14,6 +14,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
     background-color: var(--second-color);
 
 }
@@ -32,8 +33,9 @@
 }
 
 .workoutitem {
+    position: relative;
     margin: 2.5vw 0;
-    width: 90%;
+    width: 95%;
     background-color: var(--third-color);
     border: 2px var(--third-color) solid;
     min-height: calc(17.5vw + 40px);
@@ -42,6 +44,20 @@
     text-align: center;
     display: flex;
     flex-direction: column;
+}
+
+.deleteWorkoutButton{
+    position: absolute;
+    right: 1%;
+    border-radius: 20px;
+    width: calc(2vw + 5px);
+    height: calc(2vw + 5px) ;
+    margin-right: 0.2vw;
+    border: none;
+    text-decoration: none;
+    font-size: calc(1vw + 5px);
+    background-color: white;
+    cursor: pointer;
 }
 .workoutitem-name{
     font-size: calc(1.5vw + 9px);
@@ -57,7 +73,7 @@
 }
 .workoutitem--row-first{
     position: absolute;
-    left: 2%;
+    left: 1%;
     top: 50%;
     transform: translateY(-50%);
     width: 25%;
@@ -80,20 +96,19 @@
     position: relative;
     background-color: var(--text-color);
     height: calc(2vw + 7px);
-    padding: 2.5vh 1vw;
+    padding: 1.5vh 1vw;
     margin: 1vh 0;
     border-radius: 15px;
     font-size: calc(0.7vw + 9px);
     font-weight: 500;
     font-family:Arial, Helvetica, sans-serif;
-    overflow: hidden;
 
 
 
 }
 .workoutExercises > div > input{
     font-size: calc(0.7vw + 9px);
-    height: calc(2vw + 7px);
+    height: calc(2vw + 6px);
 
 }
 .exerciseFirstInput{
@@ -175,14 +190,14 @@
 
 .workoutform{
     margin-top: 5vh;
-    min-height: 50vh;
-    width: 70%;
+    min-height: 30vh;
+    width: 85%;
     background-color: #ef233c;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     padding: 1vw;
+    justify-content: space-around;
     text-align: center;
     
 
@@ -191,11 +206,9 @@
 .workoutform > input {
     padding: 0.5vw;
     text-align: center;
+    margin:calc(0.7vh + 5px)  0;
 }
-.workoutform > select {
-    text-align: center;
-    padding: 0.5vw;
-}
+
 .workoutform > label{
     font-weight: 600;
 }
@@ -224,4 +237,21 @@
 .button--bar > button:hover {
     cursor: pointer;
     box-shadow: 0px 0px 5px 0px rgba(66, 68, 90, 1);
+}
+
+.newExerciseButton {
+    
+    margin: 0 auto;
+    border-radius: 20px;
+    width: calc(2vw + 5px);
+    height: calc(2vw + 5px) ;
+    border: none;
+    text-decoration: none;
+    font-size: calc(1vw + 8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    cursor: pointer;
+    text-align: center;
 }

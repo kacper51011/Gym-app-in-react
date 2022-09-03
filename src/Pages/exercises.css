@@ -33,7 +33,7 @@
   width: 40vw;
   height: 100%;
   border-collapse: collapse;
-  background-color: var(--third-color)
+  background-color: #8d99ae;
 }
 
 
@@ -58,8 +58,8 @@ optgroup{
   width: 100vw;
   min-height: 85vh;
   display: grid;
-  grid-template-columns: calc(18vw + 35px) calc(18vw + 35px) calc(18vw + 35px);
-  grid-auto-rows: calc(30vw + 40px);
+  grid-template-columns: calc(16vw + 35px) calc(16vw + 35px) calc(16vw + 35px);
+  grid-auto-rows: calc(28vw + 35px);
   justify-content: space-around;
   row-gap: 5vh;
   

@@ -6,8 +6,16 @@ import WorkoutForm from "./WorkoutForm";
 import WorkoutItem from "./WorkoutItem";
 import workoutData from "./WorkoutData";
 import useLocalStorage from "../utils/useLocalStorage";
+import uuid from "react-uuid";
 
 const WorkoutsContainer = () => {
+  const newExerciseTemplate = {
+    exerciseName: "",
+    exerciseSets: "",
+    exerciseReps: "",
+    exerciseWeight: "",
+    componentId: uuid(),
+  };
   const [showWorkoutForm, setForm] = useState(false);
   const [workouts, setWorkouts] = useLocalStorage("workoutData", workoutData);
 
@@ -23,6 +31,16 @@ const WorkoutsContainer = () => {
           workoutDays={workout.workoutDays}
           workoutType={workout.workoutType}
           key={workout.componentId}
+          deleteFunc={() => {
+            const newWorkouts = workouts.filter(
+              (x) => x.componentId !== workout.componentId
+            );
+            setWorkouts(newWorkouts);
+          }}
+          addNewWorkoutExercise={() => {
+            workout.exercises = [...workout.exercises, newExerciseTemplate];
+            setWorkouts([...workouts]);
+          }}
           children={workout.exercises.map((exercise) => (
             <WorkoutExercises
               exerciseName={exercise.exerciseName}

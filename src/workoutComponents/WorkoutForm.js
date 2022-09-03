@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import uuid from "react-uuid";
 import WorkoutExercises from "./WorkoutExercises";
+import * as riIcons from "react-icons/ri";
 
 const WorkoutForm = (props) => {
   const newExerciseTemplate = {
@@ -80,12 +81,13 @@ const WorkoutForm = (props) => {
         })}
       </div>
       <button
+        className="newExerciseButton"
         type="button"
         onClick={(e) => {
           setNewWorkoutExercises([...newWorkoutExercises, newExerciseTemplate]);
         }}
       >
-        ADD NEW EXERCISE
+        <riIcons.RiAddFill />
       </button>
       <div className="button--bar">
         <button className="delete--button" onClick={props.hideNewWorkout}>
