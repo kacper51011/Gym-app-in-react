@@ -12,7 +12,20 @@ const homeButtonLinkStyle = {
 const Home = () => {
   return (
     <div className="home">
-      <div className="image--container">
+      <div className="firstSection">
+        <div className="firstSection--text">
+          <div>
+            PUT UP YOUR <br />
+            <span>WEIGHTS</span>
+          </div>
+          <div>
+            DROP DOWN YOUR <br />
+            <span>EXCUSES</span>
+          </div>
+        </div>
+        <div className="image--container"></div>
+      </div>
+      <div className="home--secondSection">
         <div className="cards--container">
           <div className="card">
             <div className="card--image">
